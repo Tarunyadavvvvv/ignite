@@ -202,15 +202,7 @@
   .grid-2, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .hero { aspect-ratio: auto; min-height: auto; padding: 45px 0 300px; background-position: 61% bottom; background-size: auto 100%; }
-  .hero-grid > div:first-child {
-    width: 100%;
-    margin-top: 14px;
-    padding: 20px 20px 24px;
-    background: rgba(255,253,249,.88);
-    backdrop-filter: blur(10px);
-    border-radius: var(--r-lg);
-    box-shadow: 0 10px 30px rgba(16,26,85,.1);
-  }
+  .hero-grid > div:first-child { width: 100%; padding-top: 14px; }
   .hero h1 { font-size: clamp(3.1rem, 17vw, 5rem); }
   .hero-lede { font-size: 1rem; max-width: 350px; }
   .hero-cta { flex-direction: column; max-width: 330px; }
