@@ -1,0 +1,99 @@
+/* ==========================================================================
+   IGNITE — Design Tokens
+   Central source of truth for color, type, spacing, radius, shadow, motion.
+   Change a value here and it updates everywhere — nothing below this file
+   should ever hard-code a color, font or radius.
+   ========================================================================== */
+
+:root {
+  /* ---------- Brand gradient ---------- */
+  --grad-hero: linear-gradient(110deg, #fb2584 0%, #ff7945 100%);
+  --grad-hero-soft: linear-gradient(135deg, rgba(251,37,132,.12) 0%, rgba(255,189,54,.18) 100%);
+  --grad-line: linear-gradient(90deg, #fb2584, #ff7945);
+  --grad-cta: linear-gradient(110deg, #f71b85, #ff7b45);
+  --grad-volt: linear-gradient(135deg, #a7e67d, #56c6b8);
+
+  /* ---------- Surfaces ---------- */
+  --bg-0: #fffdf9;
+  --bg-1: #f4fbff;
+  --bg-2: #ffffff;
+  --bg-3: #eaf6ff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fff8fc;
+  --border-subtle: rgba(15,28,87,.11);
+  --border-strong: rgba(15,28,87,.18);
+
+  /* ---------- Text ---------- */
+  --text-primary: #101a55;
+  --text-secondary: #4d557d;
+  --text-muted: #7780a2;
+  --text-inverse: #ffffff;
+
+  /* ---------- Accents ---------- */
+  --accent-violet: #9370f8;
+  --accent-pink: #fb2584;
+  --accent-orange: #ff7945;
+  --accent-volt: #27cf86;
+  --accent-cyan: #2aa9f5;
+  --accent-amber: #ffbb17;
+  --accent-red: #f52b87;
+
+  /* ---------- Difficulty ---------- */
+  --diff-beginner: #1fa968;
+  --diff-beginner-bg: rgba(39,207,134,.14);
+  --diff-intermediate: #d98a00;
+  --diff-intermediate-bg: rgba(255,187,23,.18);
+  --diff-advanced: #e01c72;
+  --diff-advanced-bg: rgba(245,43,135,.12);
+
+  /* ---------- Do / Don't ---------- */
+  --do-color: #1fa968;
+  --do-bg: rgba(39,207,134,.1);
+  --dont-color: #e0335f;
+  --dont-bg: rgba(245,43,135,.08);
+
+  /* ---------- Exercise-effectiveness rating (muscle library) ---------- */
+  --rate-best: #1fa968;
+  --rate-best-bg: rgba(39,207,134,.14);
+  --rate-average: #d98a00;
+  --rate-average-bg: rgba(255,187,23,.18);
+  --rate-okay: #e07b1a;
+  --rate-okay-bg: rgba(224,123,26,.14);
+  --rate-poor: #e01c72;
+  --rate-poor-bg: rgba(245,43,135,.12);
+
+  /* ---------- Type ---------- */
+  --font-display: 'Baloo 2', 'Trebuchet MS', system-ui, sans-serif;
+  --font-body: 'Nunito', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* ---------- Radius ---------- */
+  --r-sm: 12px;
+  --r-md: 18px;
+  --r-lg: 28px;
+  --r-pill: 999px;
+
+  /* ---------- Shadow ---------- */
+  --shadow-sm: 0 6px 18px rgba(22,57,119,.08);
+  --shadow-md: 0 12px 30px rgba(22,57,119,.11);
+  --shadow-lg: 0 24px 50px rgba(22,57,119,.15);
+  --shadow-glow-pink: 0 12px 24px rgba(251,37,132,.2);
+  --shadow-glow-volt: 0 12px 24px rgba(39,207,134,.22);
+
+  /* ---------- Layout ---------- */
+  --container: 1240px;
+  --header-h: 76px;
+
+  /* ---------- Motion ---------- */
+  --ease-out: cubic-bezier(.16,1,.3,1);
+  --dur-fast: .18s;
+  --dur-med: .35s;
+  --dur-slow: .6s;
+
+  /* ---------- Card accent rotation (topic/category cards) ---------- */
+  --accent-1: #f52b87; --accent-1-bg: linear-gradient(135deg,#fff,#ffe8f3);
+  --accent-2: #ff9e1d; --accent-2-bg: linear-gradient(135deg,#fffdf7,#fff0d7);
+  --accent-3: #27cf86; --accent-3-bg: linear-gradient(135deg,#fff,#e4faed);
+  --accent-4: #9370f8; --accent-4-bg: linear-gradient(135deg,#fff,#eeeaff);
+  --accent-5: #2aa9f5; --accent-5-bg: linear-gradient(135deg,#fff,#e2f5ff);
+  --accent-6: #ffbb17; --accent-6-bg: linear-gradient(135deg,#fff,#fff4d5);
+}

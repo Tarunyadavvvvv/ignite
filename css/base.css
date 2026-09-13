@@ -1,0 +1,127 @@
+/* ==========================================================================
+   IGNITE — Base / Reset
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-0);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+svg { display: block; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol { margin: 0; padding: 0; list-style: none; }
+p { margin: 0 0 1em; }
+button { font-family: inherit; }
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 .5em;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2.2rem, 4.5vw, 3.8rem); }
+h2 { font-size: clamp(1.7rem, 3vw, 2.6rem); }
+h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); }
+h4 { font-size: 1.1rem; }
+
+::selection { background: var(--accent-pink); color: #fff; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-1); }
+::-webkit-scrollbar-thumb { background: rgba(16,26,85,.18); border-radius: 10px; border: 2px solid var(--bg-1); }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-pink); }
+
+:focus-visible {
+  outline: 2px solid var(--accent-volt);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.text-gradient {
+  background: var(--grad-hero);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent-pink);
+  margin-bottom: 14px;
+}
+.eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 2px;
+  background: var(--grad-line);
+  border-radius: 2px;
+}
+
+.section {
+  padding: 96px 0;
+  position: relative;
+}
+.section-head {
+  max-width: 680px;
+  margin: 0 0 48px;
+}
+.section-head p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+.section-head.center { margin-inline: auto; text-align: center; }
+
+.muted { color: var(--text-secondary); }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px; top: -60px;
+  background: var(--accent-volt);
+  color: var(--text-inverse);
+  padding: 10px 16px;
+  border-radius: var(--r-sm);
+  font-weight: 700;
+  z-index: 999;
+  transition: top var(--dur-fast) var(--ease-out);
+}
+.skip-link:focus { top: 12px; }
