@@ -1,6 +1,8 @@
 /* ==========================================================================
-   <ignite-muscle-library> — the Gym & Weighted muscle-first browser.
-   Reads window.GYM_MUSCLE_DATA (gym-muscle-data.js must load first).
+   <ignite-muscle-library> — the muscle/target-first exercise browser used by
+   Gym & Weighted and Running. Reads a global data array — defaults to
+   window.GYM_MUSCLE_DATA, or pass source="RUNNING_DATA" (etc.) to point it
+   at a different one; that script must load before this component does.
 
    Layout: big category tabs across the top — only ONE category's panel is
    visible below at a time. Inside a panel, the left sidebar is an accordion
@@ -40,7 +42,8 @@
 
   class MuscleLibrary extends HTMLElement {
     connectedCallback() {
-      this._data = window.GYM_MUSCLE_DATA || [];
+      var sourceName = this.getAttribute('source') || 'GYM_MUSCLE_DATA';
+      this._data = window[sourceName] || [];
       this._base = /\/(exercises|nutrition|recovery)\//.test(window.location.pathname) ? '../' : '';
       this._openMuscle = {};  // categoryKey -> open muscle index (-1 = none)
       this._selected = {};    // categoryKey -> selected exercise id

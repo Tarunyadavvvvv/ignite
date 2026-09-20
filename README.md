@@ -41,10 +41,11 @@ component CSS applies to them unchanged.
   The list-on-the-left / detail-on-the-right exercise browser used on 8 of
   the 9 category pages. See below.
 - [`js/components/muscle-library.js`](js/components/muscle-library.js) —
-  `<ignite-muscle-library></ignite-muscle-library>`. The one exception:
-  `exercises/gym.html` is organized muscle-first instead (Back → Lats →
-  ranked exercises) rather than as a flat exercise list. See "The Gym muscle
-  library" below.
+  `<ignite-muscle-library source="GYM_MUSCLE_DATA">` (the default; the
+  attribute can be omitted on `exercises/gym.html`). Organized target-first
+  instead of as a flat exercise list (Back → Lats → ranked exercises).
+  `exercises/running.html` reuses the same component with
+  `source="RUNNING_DATA"`. See "The muscle library" below.
 
 `js/main.js` only holds what's left over that isn't owned by a component:
 scroll-reveal (`[data-reveal]`), the generic accordion toggle (nutrition
@@ -136,11 +137,15 @@ genuinely doesn't need much guidance (a simple warm-up move, say), it's
 fine, even preferred, to leave it lighter rather than padding it with
 generic advice.
 
-## The Gym muscle library (different from the other 8 categories)
+## The muscle library (Gym & Weighted, and Running)
 
-`exercises/gym.html` doesn't use `<ignite-exercise-explorer>` — gym/weighted
-training is organized **muscle-first** instead of as a flat exercise list,
-via `<ignite-muscle-library>`. It's a drill-down, not a long scrolling page:
+`exercises/gym.html` and `exercises/running.html` don't use
+`<ignite-exercise-explorer>` — both are organized **target-first** instead
+of as a flat exercise list, via `<ignite-muscle-library>`. The component
+reads `window.GYM_MUSCLE_DATA` by default; pass `source="RUNNING_DATA"` (or
+any other global) to point it at a different data array instead — that's
+the only difference between the two pages' markup. It's a drill-down, not a
+long scrolling page:
 
 1. **Big category tabs** across the top (Warm-Up, Back, Biceps/Arms, Chest,
    Triceps, Legs, Shoulders, Core, Full Body, Cool-Down) — only one
@@ -183,14 +188,29 @@ A category can also carry a `note` (a short intro line rendered at the top
 of its panel) — used by Warm-Up and Cool-Down to explain the section, but
 available to any category.
 
+### Running (home page only)
+
+`exercises/running.html` is the same component pointed at
+[`js/running-data.js`](js/running-data.js) (`window.RUNNING_DATA`) instead —
+four tabs: `Warm-Up`, `Runner's Knee`, `Runner's Legs` and `Post-Run
+Stretches`, using the exact same shapes described above (`Warm-Up` and
+`Post-Run Stretches` are "must before/after" checklists; `Runner's Knee`
+and `Runner's Legs` are ranked muscle groups). It's deliberately not part
+of the 9-category exercise hub or the site's 11-phase numbering — the only
+place it's linked from is the home page's Quick Links row, right after
+Workouts.
+
 ### Editing the muscle library
 
-Everything lives in [`js/gym-muscle-data.js`](js/gym-muscle-data.js) as
-`window.GYM_MUSCLE_DATA` — an array of categories. Most have a `muscles`
-array (each `{ label, exercises }`), including `Warm-Up` and `Cool-Down`
-(where `label` is a "Must Before/After …" grouping instead of a muscle
-name). Only `Full Body` has a flat `exercises` array directly instead,
-since it has no single target muscle and nothing to group by.
+Everything for Gym & Weighted lives in
+[`js/gym-muscle-data.js`](js/gym-muscle-data.js) as
+`window.GYM_MUSCLE_DATA` — an array of categories (Running's
+[`js/running-data.js`](js/running-data.js) follows the identical shape).
+Most have a `muscles` array (each `{ label, exercises }`), including
+`Warm-Up` and `Cool-Down` (where `label` is a "Must Before/After …"
+grouping instead of a muscle name). Only `Full Body` has a flat
+`exercises` array directly instead, since it has no single target muscle
+and nothing to group by.
 
 To add an exercise alternative:
 
