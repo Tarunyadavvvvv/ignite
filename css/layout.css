@@ -21,14 +21,12 @@
   margin: 18px 0 22px;
 }
 .hero .text-gradient { background: linear-gradient(105deg, #f51c84 16%, #ff7b45 80%); -webkit-background-clip: text; background-clip: text; }
-.hero-lede { color: #263465; font-size: 1.15rem; font-weight: 600; max-width: 485px; line-height: 1.46; margin-bottom: 28px; }
-.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 34px; }
-.hero-cta .btn { padding: 14px 24px; font-size: 1rem; }
+.hero-lede { color: #263465; font-size: 1.15rem; font-weight: 600; max-width: 485px; line-height: 1.46; margin-bottom: 0; }
 
 /* ---------- Page banner (interior pages) ---------- */
 .page-banner {
   position: relative;
-  padding: 56px 0 48px;
+  padding: 96px 0 48px;
   overflow: hidden;
   border-bottom: 1px solid var(--border-subtle);
   background: linear-gradient(180deg, #fff, var(--bg-1));
@@ -140,48 +138,11 @@
 .mb-0 { margin-bottom: 0; }
 
 /* ==========================================================================
-   Home page — "system" section flourishes
-   (page-specific decoration; not part of the shared component set)
-   ========================================================================== */
-#system {
-  position: relative; overflow: hidden; padding-top: 72px;
-  background: radial-gradient(circle at 5% 50%, #fff3cb 0 7%, transparent 7.1%),
-              radial-gradient(circle at 94% 18%, #ffe7f4 0 8%, transparent 8.1%),
-              linear-gradient(180deg, #fffdf9, #f7fcff);
-}
-#system::before, #system::after {
-  position: absolute; z-index: 0;
-  font-family: var(--font-display); font-weight: 800; line-height: .9;
-  letter-spacing: -1px; transform: rotate(-11deg); opacity: .95;
-  white-space: pre;
-}
-#system::before { content: 'BUILD\ABETTER\AHABITS'; left: 5.5%; top: 180px; color: var(--text-primary); font-size: 1.55rem; }
-#system::after { content: 'STRONGER\AHAPPIER\AYOU \2665'; right: 4%; top: 156px; color: var(--accent-pink); font-size: 1.55rem; transform: rotate(10deg); }
-#system .container { position: relative; z-index: 1; max-width: 1120px; }
-#system .section-head { margin-bottom: 38px; max-width: 620px; }
-#system .section-head h2 { font-size: clamp(2.5rem, 4vw, 4rem); letter-spacing: -.05em; }
-#system .grid { gap: 20px; position: relative; }
-#system .grid::before {
-  content: ''; position: absolute; border: 4px dashed #cbdced; border-radius: 45%;
-  width: 96%; height: 70%; left: 2%; top: 16%; z-index: -1; opacity: .85;
-}
-.card-illustration {
-  position: absolute; right: 2px; top: -36px; width: 132px; height: 132px;
-  object-fit: contain; filter: drop-shadow(0 10px 8px rgba(47,69,111,.12));
-  z-index: 1;
-}
-.topic-card:has(.card-illustration) .topic-icon { display: none; }
-
-/* ==========================================================================
    Responsive
    ========================================================================== */
 @media (max-width: 1080px) {
-  .main-nav, .nav-cta .btn-ghost { display: none; }
-  .nav-toggle { display: flex; }
   .hero { aspect-ratio: auto; min-height: 710px; background-position: 60% center; }
   .hero-grid > div:first-child { width: min(55%, 560px); }
-  #system::before, #system::after { display: none; }
-  #system .container { max-width: 900px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .split { grid-template-columns: 1fr; gap: 32px; }
   .split.reverse .split-media { order: 0; }
@@ -197,22 +158,17 @@
 }
 
 @media (max-width: 680px) {
-  .site-header { height: 66px; }
   .section { padding: 64px 0; }
   .grid-2, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .hero { aspect-ratio: auto; min-height: auto; padding: 45px 0 300px; background-position: 61% bottom; background-size: auto 100%; }
-  .hero-grid > div:first-child { width: 100%; padding-top: 14px; }
+  .hero-grid > div:first-child { width: 100%; padding-top: 44px; }
   .hero h1 { font-size: clamp(3.1rem, 17vw, 5rem); }
   .hero-lede { font-size: 1rem; max-width: 350px; }
-  .hero-cta { flex-direction: column; max-width: 330px; }
-  .hero-cta .btn { width: 100%; padding: 12px 18px; }
-  .quick-links-section { padding-top: 30px; }
-  .quick-links { gap: 22px 18px; }
-  .quick-link { width: 116px; }
-  .icon-badge.xl { width: 66px; height: 66px; font-size: 30px; }
-  #system { padding-top: 58px; }
-  #system .grid::before { display: none; }
+  .quick-links-section { margin-top: -70px; padding: 10px 0 56px; }
+  .quick-links { gap: 28px 20px; }
+  .quick-link { width: 160px; }
+  .icon-badge.xl { width: 156px; height: 156px; font-size: 72px; }
   .topic-card { min-height: 155px; }
   .cta-band { padding: 36px 22px; }
   .cta-actions { flex-direction: column; }

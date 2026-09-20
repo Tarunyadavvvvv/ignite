@@ -102,36 +102,52 @@ window.GYM_MUSCLE_DATA = [
           images: ['assets/images/pull-ups.png'] },
         { name: 'Lat Pulldown (Wide Grip)', equipment: 'Cable Machine', rating: 'best',
           images: ['assets/images/lat-pulldown.png'] },
-        { name: 'Straight-Arm Pulldown', equipment: 'Cable Machine', rating: 'average' },
-        { name: 'Seated Cable Row (Wide Grip)', equipment: 'Cable Machine', rating: 'okay' }
+        { name: 'Straight-Arm Pulldown', equipment: 'Cable Machine', rating: 'average',
+          images: ['assets/images/single-arm pulldown.png'] },
+        { name: 'Seated Cable Row (Wide Grip)', equipment: 'Cable Machine', rating: 'okay',
+          images: ['assets/images/seated cable row (wide- grip).png'] }
       ]},
       { label: 'Upper Traps', exercises: [
-        { name: 'Barbell Shrug', equipment: 'Barbell', rating: 'best' },
-        { name: 'Dumbbell Shrug', equipment: 'Dumbbells', rating: 'best' },
+        { name: 'Barbell Shrug', equipment: 'Barbell', rating: 'best',
+          images: ['assets/images/barbell shrug.png'] },
+        { name: 'Dumbbell Shrug', equipment: 'Dumbbells', rating: 'best',
+          images: ['assets/images/Dumbbell Shrug.png'] },
         { name: 'Cable Shrug', equipment: 'Cable Machine', rating: 'average' },
-        { name: "Farmer's Carry", equipment: 'Dumbbells / Kettlebells', rating: 'okay' }
+        { name: "Farmer's Carry", equipment: 'Dumbbells / Kettlebells', rating: 'okay',
+          images: ['assets/images/farmers-carry.png'] }
       ]},
       { label: 'Middle Traps', exercises: [
         { name: 'Chest-Supported Row', equipment: 'Dumbbells / Machine', rating: 'best' },
-        { name: 'Seated Cable Row (Neutral Grip)', equipment: 'Cable Machine', rating: 'best' },
-        { name: 'Face Pull', equipment: 'Cable Machine', rating: 'average' },
-        { name: 'Reverse Fly', equipment: 'Dumbbells', rating: 'okay' }
+        { name: 'Seated Cable Row (Neutral Grip)', equipment: 'Cable Machine', rating: 'best',
+          images: ['assets/images/seated cable row(neutral-grip).png'] },
+        { name: 'Face Pull', equipment: 'Cable Machine', rating: 'average',
+          images: ['assets/images/face pulls.png'] },
+        { name: 'Reverse Fly', equipment: 'Dumbbells', rating: 'okay',
+          images: ['assets/images/reverse fly with dumbbells.png'] }
       ]},
       { label: 'Lower Traps', exercises: [
         { name: 'Incline Y-Raise', equipment: 'Dumbbells', rating: 'best' },
-        { name: 'Face Pull (High Angle)', equipment: 'Cable Machine', rating: 'average' },
-        { name: 'Prone Trap Raise / Snow Angel', equipment: 'Bodyweight', rating: 'average' },
-        { name: 'Upright Row', equipment: 'Barbell / Dumbbells', rating: 'poor' }
+        { name: 'Face Pull (High Angle)', equipment: 'Cable Machine', rating: 'average',
+          images: ['assets/images/face pulls(high angle)png.png'] },
+        { name: 'Prone Trap Raise / Snow Angel', equipment: 'Bodyweight', rating: 'average',
+          images: ['assets/images/Prone Trap Raise(Snow Angel).png'] },
+        { name: 'Upright Row', equipment: 'Barbell / Dumbbells', rating: 'poor',
+          images: ['assets/images/upright row.png'] }
       ]},
       { label: 'Rhomboids', exercises: [
-        { name: 'Bent-Over Barbell Row', equipment: 'Barbell', rating: 'best' },
+        { name: 'Bent-Over Barbell Row', equipment: 'Barbell', rating: 'best',
+          images: ['assets/images/Bent-Over Barbell Row.png'] },
         { name: 'Seated Cable Row', equipment: 'Cable Machine', rating: 'best' },
-        { name: 'Face Pull', equipment: 'Cable Machine', rating: 'average' },
-        { name: 'Reverse Pec-Deck Fly', equipment: 'Machine', rating: 'okay' }
+        { name: 'Face Pull', equipment: 'Cable Machine', rating: 'average',
+          images: ['assets/images/face pulls.png'] },
+        { name: 'Reverse Pec-Deck Fly', equipment: 'Machine', rating: 'okay',
+          images: ['assets/images/reverse pec-deck fly.png'] }
       ]},
       { label: 'Erector Spinae (Lower Back)', exercises: [
-        { name: 'Deadlift', equipment: 'Barbell', rating: 'best' },
-        { name: 'Back Extension', equipment: 'Machine / Bench', rating: 'best' },
+        { name: 'Deadlift', equipment: 'Barbell', rating: 'best',
+          images: ['assets/images/deadlift.png'] },
+        { name: 'Back Extension', equipment: 'Machine / Bench', rating: 'best',
+          images: ['assets/images/back-extension.png'] },
         { name: 'Good Morning', equipment: 'Barbell', rating: 'average' },
         { name: 'Superman', equipment: 'Bodyweight', rating: 'okay' }
       ]}
@@ -159,7 +175,8 @@ window.GYM_MUSCLE_DATA = [
       ]},
       { label: 'Forearms', exercises: [
         { name: 'Wrist Curl', equipment: 'Barbell / Dumbbells', rating: 'best' },
-        { name: "Farmer's Carry", equipment: 'Dumbbells / Kettlebells', rating: 'average' },
+        { name: "Farmer's Carry", equipment: 'Dumbbells / Kettlebells', rating: 'average',
+          images: ['assets/images/farmers-carry.png'] },
         { name: 'Reverse Wrist Curl', equipment: 'Barbell / Dumbbells', rating: 'average' },
         { name: 'Standard Barbell Curl', equipment: 'Barbell', rating: 'poor' }
       ]}
@@ -257,11 +274,14 @@ window.GYM_MUSCLE_DATA = [
         { name: 'Dumbbell Lateral Raise', equipment: 'Dumbbells', rating: 'best' },
         { name: 'Cable Lateral Raise', equipment: 'Cable Machine', rating: 'best' },
         { name: 'Machine Lateral Raise', equipment: 'Machine', rating: 'average' },
-        { name: 'Upright Row', equipment: 'Barbell / Dumbbells', rating: 'okay' }
+        { name: 'Upright Row', equipment: 'Barbell / Dumbbells', rating: 'okay',
+          images: ['assets/images/upright row.png'] }
       ]},
       { label: 'Rear Delts', exercises: [
-        { name: 'Face Pull', equipment: 'Cable Machine', rating: 'best' },
-        { name: 'Reverse Pec-Deck Fly', equipment: 'Machine', rating: 'best' },
+        { name: 'Face Pull', equipment: 'Cable Machine', rating: 'best',
+          images: ['assets/images/face pulls.png'] },
+        { name: 'Reverse Pec-Deck Fly', equipment: 'Machine', rating: 'best',
+          images: ['assets/images/reverse pec-deck fly.png'] },
         { name: 'Bent-Over Reverse Fly', equipment: 'Dumbbells', rating: 'average' },
         { name: 'Front Raise', equipment: 'Dumbbells / Plate', rating: 'poor' }
       ]}
@@ -292,14 +312,16 @@ window.GYM_MUSCLE_DATA = [
         { name: 'Ab Wheel Rollout', equipment: 'Ab Wheel', rating: 'best' },
         { name: 'Pallof Press', equipment: 'Cable Machine', rating: 'best' },
         { name: 'Weighted Plank', equipment: 'Bodyweight / Weight Plate', rating: 'average' },
-        { name: "Farmer's Carry", equipment: 'Dumbbells / Kettlebells', rating: 'okay' }
+        { name: "Farmer's Carry", equipment: 'Dumbbells / Kettlebells', rating: 'okay',
+          images: ['assets/images/farmers-carry.png'] }
       ]}
     ]
   },
   {
     key: 'full-body', label: 'Full Body', emoji: '🧍', accent: 'pink',
     exercises: [
-      { name: 'Deadlift', equipment: 'Barbell', rating: 'best' },
+      { name: 'Deadlift', equipment: 'Barbell', rating: 'best',
+        images: ['assets/images/deadlift.png'] },
       { name: 'Clean and Press', equipment: 'Barbell', rating: 'best' },
       { name: 'Kettlebell Swing', equipment: 'Kettlebell', rating: 'average' },
       { name: 'Thruster', equipment: 'Barbell / Dumbbells', rating: 'average' },
