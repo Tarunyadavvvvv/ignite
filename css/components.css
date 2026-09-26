@@ -265,7 +265,7 @@ a.topic-card::after {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 56px;
+  gap: 36px;
 }
 .quick-link {
   display: flex;
@@ -273,10 +273,18 @@ a.topic-card::after {
   align-items: center;
   text-align: center;
   gap: 14px;
-  width: 220px;
+  width: 184px;
 }
 .quick-link .icon-badge { transition: transform var(--dur-fast), box-shadow var(--dur-fast); }
 .quick-link:hover .icon-badge { transform: translateY(-5px); box-shadow: 0 12px 22px rgba(37,63,124,.18); }
+.shortcut-art { width: 190px !important; height: 172px !important; position: relative; overflow: hidden; isolation: isolate; border-radius: 34px !important; }
+.shortcut-art::before { content: ''; position: absolute; inset: 10px; border-radius: 27px; background: rgba(255,255,255,.34); z-index: -1; }
+.shortcut-art img { width: 88%; height: 88%; max-width: none; object-fit: contain; object-position: center center; filter: drop-shadow(0 8px 8px rgba(30,55,110,.14)); }
+.quick-link:nth-child(2) .shortcut-art img { width: 85%; height: 85%; }
+.quick-link:nth-child(3) .shortcut-art img { width: 87%; height: 87%; }
+.quick-link:nth-child(5) .shortcut-art img { width: 84%; height: 84%; }
+.yoga-art { background: linear-gradient(135deg,#f4ecff,#e9e5ff); }
+.yoga-symbol { font-size: 94px; line-height: 1; transform: translateY(5px); filter: drop-shadow(0 8px 8px rgba(72,61,147,.13)); }
 .quick-link-title { font-family: var(--font-display); font-weight: 800; font-size: 1.02rem; line-height: 1.2; color: var(--text-primary); }
 .quick-link-sub { color: var(--text-secondary); font-weight: 700; font-size: .82rem; line-height: 1.3; }
 

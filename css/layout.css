@@ -168,7 +168,8 @@
   .quick-links-section { margin-top: -70px; padding: 10px 0 56px; }
   .quick-links { gap: 28px 20px; }
   .quick-link { width: 160px; }
-  .icon-badge.xl { width: 156px; height: 156px; font-size: 72px; }
+  .shortcut-art { width: 156px !important; height: 144px !important; border-radius: 28px !important; }
+  .yoga-symbol { font-size: 76px; }
   .topic-card { min-height: 155px; }
   .cta-band { padding: 36px 22px; }
   .cta-actions { flex-direction: column; }
